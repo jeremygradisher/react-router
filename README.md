@@ -2,6 +2,22 @@
 
 ## Creating a multi-page React application with Navigation
 
+$ npm install
+$ npm install --save react-router-dom@6
+
+video 1: https://youtu.be/mSplGHfTkOE
+
+video 2: https://youtu.be/G26nO0QrEMc
+
+video 3: https://youtu.be/KGJi3z3jHAo - Providing A Router
+Task 1
+To add routing to your application, in App.js, import RouterProvider and replace REPLACE ME WITH A ROUTER PROVIDER with a RouterProvider.
+
+Task 2
+Assign the RouterProvider> component a router prop. Its value should be the previously defined router constant. Don’t worry about seeing a blank page if you run npm start. We’ll fix this in the next exercise when we configure our router.
+
+video 4: https://www.youtube.com/watch?v=_2yG8J3S33U - Creating Routes
+
 ## What is React Router?
 React Router is a library that provides navigational components for React developers to create Single-Page Applications (SPAs) with dynamic, client-side routing.
 
