@@ -24,12 +24,41 @@ Task 2
 Next, let’s render the main routes of the application. As you can see, at the top of App.js a number of components are being imported but not used. For now, we’ll render the About, SignUp, Articles, Categories, and Profile components.
 
 Using createBrowserRouter, createRoutesFromElements, and Route, let’s define our routes between the opening and closing tags of the Root route (we’ll understand what exactly we’re doing here when we talk about nested routes) for the following components to their respective paths:
-
+```
 About: /about
 SignUp: /sign-up
 Articles: /articles
 Categories: /categories
 Profile: /profile
+```
+
+video 5: https://youtu.be/wt4JTW2gVdg - Linking to Routes
+
+In the last exercise, you used the URL bar to navigate to a path that matched one of your application’s routes. But how do you navigate from within the app itself?
+
+When building a website using HTML, we use the anchor ((anchor tag)) tag to create links to other pages. A side effect of the anchor tag is that it causes the page to reload. This can distract our users from the immersive experience of our smooth React application!
+
+Task 1
+Head over to Articles.js located in the src/components/. This component renders a list of (anchor tag) links for each value in the filteredArticles array. If you try clicking on these links in the running application, you’ll notice a very subtle page reload (pay attention to the “refresh” button in your browser)!
+
+Import the Link component into this file and then replace the (anchor tag) tags to eliminate the page reload!
+
+Note: The articles themselves won’t appear yet. We’ll fix that soon!
+
+Hint
+Task 2
+In the running application, try clicking on the links rendered by the Header, such as “Articles”. Again, you may notice a page refresh.
+
+Open up the Header.js file and you’ll see that these links are rendered using plain old (anchor tag) tags!
+
+First, import the NavLink component into the Header.js file. Then, inside the return statement of the Header component, replace each instance of the (anchor tag) tag with a NavLink component.
+
+Make sure to replace the href attribute with the to prop!
+
+Hint
+Task 3
+To verify your work, try clicking on the navigation links. You should notice that the page no longer refreshes! Furthermore, you’ll notice the link you clicked on will be bolded!
+
 
 
 
