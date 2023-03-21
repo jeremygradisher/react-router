@@ -2,6 +2,14 @@
 
 ## Creating a multi-page React application with Navigation
 
+## What is React Router?
+React Router is a library that provides navigational components for React developers to create Single-Page Applications (SPAs) with dynamic, client-side routing.
+
+Applications that use React-Router can benefit from the separation of content afforded to multi-page applications without the break in the user-experience caused by page reloads.
+
+## React <RouterProvider>
+React Router can be provided to the entire application using the <RouterProvider> component (from react-router-dom) and including a router attribute. In the given example React Router is provided to the entire application using a <RouterProvider> component in the main App component.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
