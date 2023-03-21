@@ -5,18 +5,18 @@
 $ npm install
 $ npm install --save react-router-dom@6
 
-video 1: https://youtu.be/mSplGHfTkOE
+## video 1: https://youtu.be/mSplGHfTkOE
 
-video 2: https://youtu.be/G26nO0QrEMc
+## video 2: https://youtu.be/G26nO0QrEMc
 
-video 3: https://youtu.be/KGJi3z3jHAo - Providing A Router
+## video 3: https://youtu.be/KGJi3z3jHAo - Providing A Router
 Task 1
 To add routing to your application, in App.js, import RouterProvider and replace REPLACE ME WITH A ROUTER PROVIDER with a RouterProvider.
 
 Task 2
 Assign the RouterProvider> component a router prop. Its value should be the previously defined router constant. Don’t worry about seeing a blank page if you run npm start. We’ll fix this in the next exercise when we configure our router.
 
-video 4: https://www.youtube.com/watch?v=_2yG8J3S33U - Creating Routes - Basic Routing with Route
+## video 4: https://www.youtube.com/watch?v=_2yG8J3S33U - Creating Routes - Basic Routing with Route
 Task 1
 Navigate to App.js where we will begin adding routes to our router. First, add createBrowserRouter, createRoutesFromElements and Route to the import statement.
 
@@ -32,7 +32,7 @@ Categories: /categories
 Profile: /profile
 ```
 
-video 5: https://youtu.be/wt4JTW2gVdg - Linking to Routes
+## video 5: https://youtu.be/wt4JTW2gVdg - Linking to Routes
 
 In the last exercise, you used the URL bar to navigate to a path that matched one of your application’s routes. But how do you navigate from within the app itself?
 
@@ -60,8 +60,24 @@ Task 3
 To verify your work, try clicking on the navigation links. You should notice that the page no longer refreshes! Furthermore, you’ll notice the link you clicked on will be bolded!
 
 
+## video 6: https://youtu.be/N8i8uW4mxPE - Dynamic Routes:
 
+URL parameters are dynamic segments of a URL that act as placeholders for more specific resources. They appear in a dynamic route as a colon (:) followed by a variable name, like so:
+```
+const route = createBrowserRouter(createRoutesFromElement(
+  <Route path='/articles/:title' element={ <Article /> }/>
+))
+```
 
+## Let’s break down this short, yet powerful demonstration of URL parameters:
+
+In this example, the path prop 'articles/:title' contains the URL parameter :title.
+
+This means that when the user navigates to pages such as '/articles/what-is-react' or '/articles/html-and-css', the Article /> component will render.
+
+When the Article component is rendered in this way, it can access the actual value of that :title URL parameter (what-is-react or html-and-css) to determine which article to display (more on this in the next exercise). A single route can even have multiple parameters (eg. 'articles/:title/comments/:commentId') or none (eg. 'articles').
+
+Let’s take advantage of dynamic routes by using URL parameters in our application.
 
 
 
