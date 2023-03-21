@@ -79,7 +79,16 @@ When the Article component is rendered in this way, it can access the actual val
 
 Let’s take advantage of dynamic routes by using URL parameters in our application.
 
+# LEARN REACT ROUTER V6
+## useParams - video 6: https://youtu.be/oQHNGEwXr44
 
+It is common to use the value of URL parameters to determine what is displayed in the component that a dynamic route renders. For example, the Article component might need to display the title of the current article.
+
+React Router provides a hook, useParams(), for accessing the value of URL parameters. When called, useParams() returns an object that maps the names of URL Parameters to their values in the current URL.
+
+# 2022 Audit Nested Routes
+## video 7: https://youtu.be/84nxDr4_iMo
+Up to this point, we’ve been working with routers that are relatively small. As our application grows and we add more features, we may want additional components to render within our defined views depending on user actions.
 
 
 
