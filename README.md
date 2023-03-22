@@ -123,6 +123,46 @@ export default function Profile () {
 }
 ```
 
+# useNavigate
+## video 10: https://youtu.be/cTs9m2W9eoE
+
+In the previous exercise, you learned how to redirect declaratively by rendering a Navigate component that updates the browser’s current location. Though this approach follows React Router’s declarative coding style, it does introduce a few extra steps in the React rendering lifecycle:
+
+The Navigate component must be returned.
+The Navigate component is then rendered.
+The URL is updated.
+And finally the appropriate route is rendered.
+React Router also provides a mechanism for updating the browser’s location imperatively using the useNavigate hook.
+
+import { useNavigate } from 'react-router-dom';
+The useNavigate() function returns a navigate function that allows us to specify a path where we’d like to navigate.
+
+# Query Parameters
+## video 11: https://youtu.be/8AKdEh96mBQ
+
+Query parameters appear in URLs beginning with a question mark (?) and are followed by a parameter name assigned to a value. They are optional and are most often used to search, sort and/or filter resources.
+
+For example, if you were to visit the URL below…
+```
+https://www.google.com/search?q=codecademy
+```
+… you would be taken to Google’s /search page displaying results for the search term codecademy. In this example, the name of the query parameter is q.
+
+# Review: https://youtu.be/H9NYBb6hhuM
+
+Great work! You’ve learned everything you need to know to add front-end routing to your React applications using React Router! To recap, you’ve learned how to:
+
+Install react-router-dom and add it to a React application.
+Enable routing by using RouterProvider and providing a router.
+Creating a router using createBrowserRouter().
+Use createRoutesFromElements() to configure a router.
+Use the Route component to add static and dynamic routes to an application.
+Use Link and NavLink components to add links to an application.
+Access the values of URL parameters using React Router’s useParams hook.
+Create nested routes using Route, Outlet, and relative paths.
+Declaratively redirect users by rendering React Router’s Navigate component
+Imperatively redirect users via the useNavigate hook.
+Access and set the value of query parameters using React Router’s useSearchParams hook.
 
 
 
