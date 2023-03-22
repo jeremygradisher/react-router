@@ -92,8 +92,36 @@ React Router provides a hook, useParams(), for accessing the value of URL parame
 Up to this point, we’ve been working with routers that are relatively small. As our application grows and we add more features, we may want additional components to render within our defined views depending on user actions.
 
 
+# Navigate
+## video 9: 
+If you take anything away from this lesson, it should be that React Router treats everything as a component. To get fully comfortable using React Router in your code, you have to embrace this idea and the declarative coding style that follows from it. For the most part, this is pretty intuitive, but it can feel a bit counterintuitive when it comes to redirecting users.
 
+To appreciate the declarative pattern, consider a common case for redirecting a user: a user wants to access a /profile page that requires authentication but is not currently signed in.
 
+```
+import React from "react";
+import { useSelector } from "react-redux";
+import { Link, Outlet, Navigate } from "react-router-dom";
+import { selectCurrentUser, selectIsLoggedIn } from "../features/session/sessionSlice";
+
+export default function Profile () {
+  const currentUser = useSelector(selectCurrentUser)
+  const loggedIn = useSelector(selectIsLoggedIn);
+  
+  // use loggedIn to return a Navigate
+  if (!loggedIn) {
+    return <Navigate to="/sign-up"/>
+  }
+
+  return (
+    <main>
+      <h1>{currentUser.username}</h1>
+      <Link to={`edit`}>Edit</Link>
+      <Outlet/>
+    </main>
+  )
+}
+```
 
 
 
