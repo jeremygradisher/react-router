@@ -1,6 +1,6 @@
 # React-router Introduction
 
-## Creating a multi-page React application with Navigation
+## Creating a SPA React application with with dynamic, client-side routing
 
 $ npm install
 
